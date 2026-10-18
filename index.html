@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sameera Farogh | Senior Software Engineer</title>
+<meta name="description" content="Senior Software Engineer and AI Evaluator with more than eight years of experience in software architecture, web development and AI and search evaluation.">
+<link rel="icon" href="avatar.png">
+<style>
+  :root {
+    --ink: #1B2430;
+    --muted: #5B6672;
+    --bg: #F7F8FA;
+    --card: #FFFFFF;
+    --line: #D9DEE4;
+    --dark: #17212B;
+    --dark-text: #F2F5F8;
+    --dark-muted: #B7C4D1;
+    --accent: #2F5D8A;
+    --accent-light: #6F9BC4;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  a { color: var(--accent); }
+  a:hover { color: #1F4366; }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent-light); outline-offset: 2px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  header.top { background: var(--dark); }
+  .nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding: 18px 0; }
+  .brand { color: var(--dark-text); font-weight: 600; letter-spacing: 0.01em; text-decoration: none; }
+  .nav ul { display: flex; flex-wrap: wrap; gap: 6px 24px; list-style: none; margin: 0; padding: 0; }
+  .nav a.link { color: var(--dark-muted); text-decoration: none; font-size: 15px; }
+  .nav a.link:hover { color: var(--dark-text); }
+
+  .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 32px 48px; padding: 56px 0 72px; }
+  .hero img { width: 148px; height: 148px; border-radius: 6px; display: block; border: 1px solid #2B3947; }
+  .hero-text { flex: 1 1 420px; min-width: 0; }
+  .eyebrow { margin: 0 0 12px; color: var(--accent-light); font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  h1 { margin: 0 0 16px; color: var(--dark-text); font-size: clamp(34px, 5vw, 52px); line-height: 1.1; letter-spacing: -0.01em; }
+  .lead { margin: 0 0 28px; max-width: 620px; color: var(--dark-muted); font-size: 18px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 11px 22px; border-radius: 4px; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .btn.primary { background: var(--accent); color: #FFFFFF; border: 1px solid var(--accent); }
+  .btn.primary:hover { background: #3A6CA0; color: #FFFFFF; }
+  .btn.ghost { color: var(--dark-text); border: 1px solid #4A5B6D; }
+  .btn.ghost:hover { border-color: var(--dark-text); color: var(--dark-text); }
+  .accent-bar { height: 4px; background: var(--accent); }
+
+  section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; }
+  .label { margin: 0 0 8px; color: var(--accent); font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  h2 { margin: 0 0 28px; font-size: clamp(26px, 3.4vw, 34px); line-height: 1.2; letter-spacing: -0.01em; }
+  h3 { margin: 0 0 6px; font-size: 20px; line-height: 1.3; }
+  p { margin: 0 0 16px; }
+  .about p { max-width: 720px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 24px; }
+  .card ul { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
+  .card li { margin-bottom: 6px; }
+  .card p { color: var(--muted); }
+
+  .job { display: flex; flex-wrap: wrap; gap: 12px 40px; padding: 28px 0; border-top: 1px solid var(--line); }
+  .job:first-of-type { border-top: 0; padding-top: 0; }
+  .when { flex: 0 0 190px; color: var(--muted); font-size: 15px; }
+  .what { flex: 1 1 380px; min-width: 0; }
+  .role { margin: 0 0 12px; color: var(--muted); font-size: 16px; }
+  .what ul { margin: 0; padding-left: 20px; color: var(--muted); }
+  .what li { margin-bottom: 8px; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
+  .tags li { padding: 6px 14px; background: var(--card); border: 1px solid var(--line); border-radius: 4px; font-size: 15px; }
+
+  .contact-line { margin: 0 0 10px; font-size: 18px; }
+  .email { user-select: all; word-break: break-all; font-family: Consolas, "Courier New", monospace; }
+
+  footer { background: var(--dark); color: var(--dark-muted); padding: 28px 0; font-size: 14px; }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .hero { padding: 36px 0 48px; }
+    section { padding: 48px 0; }
+    .when { flex-basis: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="#top">Sameera Farogh</a>
+      <ul>
+        <li><a class="link" href="#about">About</a></li>
+        <li><a class="link" href="#expertise">Expertise</a></li>
+        <li><a class="link" href="#experience">Experience</a></li>
+        <li><a class="link" href="#skills">Skills</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="hero" id="top">
+      <img src="avatar.png" alt="Sameera Farogh initials" width="148" height="148">
+      <div class="hero-text">
+        <p class="eyebrow">Senior Software Engineer | AI Evaluator</p>
+        <h1>Sameera Farogh</h1>
+        <p class="lead">More than eight years of building and testing web software, now also evaluating language models and search systems.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="#experience">View experience</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accent-bar"></div>
+</header>
+
+<main>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <p class="label">About</p>
+    <h2>Engineer first, evaluator by habit</h2>
+    <p>I am a software engineer with experience in software architecture, web development and application lifecycle management. I have designed scalable systems, written maintainable code and kept projects on schedule in fast-moving Agile teams.</p>
+    <p>Over the last few years I have moved into AI work. That means evaluating model responses, writing prompts, rating search results and validating training data. My engineering background helps here, because I know how these systems are built and where they tend to fail.</p>
+    <p>I am based in Malegaon, Maharashtra, India.</p>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="wrap">
+    <p class="label">Expertise</p>
+    <h2>Two areas of work</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Software engineering</h3>
+        <p>Building reliable web applications from design to deployment.</p>
+        <ul>
+          <li>Software architecture and full SDLC ownership</li>
+          <li>Back-end structure and front-end integration</li>
+          <li>Database schema design and complex queries</li>
+          <li>Performance tuning and legacy code refactoring</li>
+          <li>Functional, non-functional, integration and unit testing</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>AI and search evaluation</h3>
+        <p>Checking the quality of what AI systems and search engines produce.</p>
+        <ul>
+          <li>Generative AI quality analysis and LLM response evaluation</li>
+          <li>Prompt writing and optimization</li>
+          <li>Machine learning data operations and validation</li>
+          <li>Search engine and advertisement relevance evaluation</li>
+          <li>Transcription, translation and audio localization for voice models</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <p class="label">Experience</p>
+    <h2>Where I have worked</h2>
+
+    <div class="job">
+      <div class="when">2025 onward</div>
+      <div class="what">
+        <h3>AI and search evaluation</h3>
+        <p class="role">Freelance</p>
+        <ul>
+          <li>Work as a generative AI quality analyst and LLM optimization specialist, writing precise prompts and giving structured feedback as an AI content evaluator.</li>
+          <li>Manage machine learning data operations and check data quality across complex datasets.</li>
+          <li>Act as an information retrieval analyst and search engine evaluator, looking at user search intent and digital advertisement quality.</li>
+          <li>Handle linguistic data analysis, text and speech transcription and translation, audio localization, dubbing and lip-syncing to train voice models.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">January 2017 to March 2025</div>
+      <div class="what">
+        <h3>Senior Software Engineer</h3>
+        <p class="role">Promatics Technologies</p>
+        <ul>
+          <li>Architected, developed and deployed software applications and web solutions to client specifications.</li>
+          <li>Led front-end and back-end integration and kept data flow and system security in order.</li>
+          <li>Ran functional and non-functional QA, which brought down bugs found after deployment.</li>
+          <li>Worked with UI/UX designers, product managers and QA teams in an Agile setup to meet tight deadlines.</li>
+          <li>Mentored junior developers, set coding standards and pushed steady technical improvement across the team.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <p class="label">Skills</p>
+    <h2>Tools of the trade</h2>
+    <ul class="tags">
+      <li>Software architecture</li>
+      <li>Full SDLC</li>
+      <li>Full-stack development</li>
+      <li>Object-oriented design</li>
+      <li>Functional testing</li>
+      <li>Non-functional testing</li>
+      <li>Integration testing</li>
+      <li>Unit testing</li>
+      <li>Database design</li>
+      <li>Complex queries</li>
+      <li>Performance optimization</li>
+      <li>Legacy code refactoring</li>
+      <li>Agile and Scrum</li>
+      <li>Code reviews</li>
+      <li>Prompt engineering</li>
+      <li>LLM evaluation</li>
+      <li>Search relevance rating</li>
+    </ul>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <p class="label">Education</p>
+    <h2>Qualification</h2>
+    <h3>Bachelor of Engineering, Computer Engineering</h3>
+    <p>M.H. Saboo Siddik College of Engineering, Mumbai. University of Mumbai. Passed October 2016.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="label">Contact</p>
+    <h2>Let us talk</h2>
+    <p class="contact-line">Email: <span class="email">Sameera271195@gmail.com</span></p>
+    <p class="contact-line">LinkedIn: <a href="https://linkedin.com/in/sameera-ahmad-56828b339">linkedin.com/in/sameera-ahmad-56828b339</a></p>
+    <p class="contact-line">Location: Malegaon, Maharashtra, India</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Sameera Farogh. Senior Software Engineer and AI Evaluator.</div>
+</footer>
+
+</body>
+</html>
